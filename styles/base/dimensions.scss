@@ -1,0 +1,14 @@
+// Define sizes / dimensions here
+// These sizes can be called in any scss files as long as you import it.
+// Sample Import: 
+// @import '@/styles/base/dimensions.scss';
+
+// max valuest
+$max-tablet-width: 991px;
+$max-mobile-width-sm: 767px;
+$max-mobile-width-xs: 575px;
+$max-mobile-width-xxs: 376px;
+
+// min values
+$min-tablet-width: 768px;
+$min-mobile-width-sm: 576px;

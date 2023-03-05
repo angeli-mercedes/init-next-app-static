@@ -1,0 +1,72 @@
+// Define user defined scss functions here
+// These functions are reusable across all scss files as long as you import it
+// Sample Import: 
+// @import '@/styles/base/mixins.scss';
+
+// Import font to be used
+@import url("https://fonts.googleapis.com/css?family=Ubuntu:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"); 
+
+// Declare variables for font
+$ubuntu: 'Ubuntu', sans-serif !default;
+$font-size: 12px !default;
+
+// Fonts
+@mixin font-base($font-family, $font-size) {
+  font-size: $font-size;
+  font-family: $font-family;
+}
+
+@mixin font-light($font-family: $ubuntu, $font-size: $font-size) {
+  @include font-base($font-family, $font-size);
+  font-weight: 300;
+}
+
+@mixin font-regular($font-family: $ubuntu, $font-size: $font-size) {
+  @include font-base($font-family, $font-size);
+  font-weight: 400;
+}
+
+@mixin font-regular($font-family: $ubuntu, $font-size: $font-size) {
+  @include font-base($font-family, $font-size);
+  font-weight: 500;
+}
+
+// Flex
+@mixin flex($justify-content, $align-center, $flex-column) {
+  display: flex;
+  justify-content: $justify-content;
+  align-items: $align-center;
+  flex-direction: $flex-column;
+}
+
+// Padding and Margins
+@mixin margin($margin-top: 0, $margin-right: 0, $margin-bottom: 0, $margin-left: 0) {
+  margin-top: $margin-top;
+  margin-right: $margin-right;
+  margin-bottom: $margin-bottom;
+  margin-left: $margin-left;
+}
+  
+@mixin margin-all($margin: 0) {
+  @include margin($margin, $margin, $margin, $margin);
+}
+  
+@mixin margin-xy($margin-left-right-bottom: 0, $margin-top-bottom: 0) {
+  @include margin($margin-top-bottom, $margin-left-right, $margin-top-bottom, $margin-left-right);
+}
+  
+@mixin padding($padding-top: 0, $padding-right: 0, $padding-bottom: 0, $padding-left: 0) {
+  padding-top: $padding-top;
+  padding-right: $padding-right;
+  padding-bottom: $padding-bottom;
+  padding-left: $padding-left;
+}
+  
+@mixin padding-all($padding: 0) {
+  @include padding($padding, $padding, $padding, $padding);
+}
+  
+@mixin padding-xy($padding-left-right: 0, $padding-top-bottom: 0) {
+  @include padding($padding-top-bottom, $padding-left-right, $padding-top-bottom, $padding-left-right);
+}
+  

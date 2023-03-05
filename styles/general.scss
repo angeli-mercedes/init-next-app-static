@@ -1,0 +1,26 @@
+@import '@/styles/base/colors.scss';
+@import '@/styles/base/mixins.scss';
+@import '@/styles/base/dimensions.scss';
+
+// General styles 
+// can be called on classnames anywhere
+
+// general styles
+.general {
+  &-container {
+    @include flex(center, center, row);
+  }
+}
+
+// layout styles
+.layout {
+  &-container {
+    @include flex(flex-start, flex-start, row);
+  }
+
+  &-page {
+    @include flex(flex-start, flex-start, column);
+    @include font-regular($ubuntu, 12px);
+    width: 100%;
+  }
+}
